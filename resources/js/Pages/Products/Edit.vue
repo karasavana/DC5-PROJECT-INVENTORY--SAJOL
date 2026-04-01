@@ -14,6 +14,8 @@ const props = defineProps({
 });
 
 const form = useForm({
+    brand: props.product.brand,
+    model: props.product.model,
     name: props.product.name,
     description: props.product.description,
     price: props.product.price,
@@ -40,6 +42,27 @@ const submit = () => {
                     <div class="p-6 bg-white border-b border-gray-200">
                         <form @submit.prevent="submit">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Brand</label>
+                                    <input
+                                        v-model="form.brand"
+                                        type="text"
+                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                        required
+                                    />
+                                    <div v-if="form.errors.brand" class="text-red-500 text-sm mt-1">{{ form.errors.brand }}</div>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Model</label>
+                                    <input
+                                        v-model="form.model"
+                                        type="text"
+                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                        required
+                                    />
+                                    <div v-if="form.errors.model" class="text-red-500 text-sm mt-1">{{ form.errors.model }}</div>
+                                </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Name</label>
                                     <input

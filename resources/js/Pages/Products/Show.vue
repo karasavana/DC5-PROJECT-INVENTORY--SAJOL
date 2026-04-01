@@ -31,6 +31,8 @@ defineProps({
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                             <div>
                                 <h3 class="text-lg font-semibold mb-2">Product Information</h3>
+                                <p><strong>Brand:</strong> {{ product.brand }}</p>
+                                <p><strong>Model:</strong> {{ product.model }}</p>
                                 <p><strong>Name:</strong> {{ product.name }}</p>
                                 <p><strong>SKU:</strong> {{ product.sku }}</p>
                                 <p><strong>Price:</strong> ₱{{ product.price }}</p>

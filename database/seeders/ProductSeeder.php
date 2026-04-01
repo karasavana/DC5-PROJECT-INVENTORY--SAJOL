@@ -16,50 +16,62 @@ class ProductSeeder extends Seeder
         $electroWorld = Supplier::where('name', 'ElectroWorld Solutions')->first();
 
         Product::create([
-            'name' => 'Acer Aspire 5 Laptop',
-            'description' => '15.6" FHD Display, Intel Core i5, 8GB RAM, 512GB SSD - Perfect for work and study',
-            'price' => 28999.00,
-            'sku' => 'ACER-ASP5-001',
+            'brand' => 'Apple',
+            'model' => 'iPhone 15 Pro',
+            'name' => 'iPhone 15 Pro 256GB',
+            'description' => '6.1" Super Retina XDR display, A17 Pro chip, titanium design, ProRAW photography',
+            'price' => 62990.00,
+            'sku' => 'APL-IP15P-256',
             'supplier_id' => $techSource->id
         ]);
 
         Product::create([
-            'name' => 'Logitech M185 Wireless Mouse',
-            'description' => 'Compact wireless mouse with 12-month battery life, reliable plug-and-play connection',
-            'price' => 599.00,
-            'sku' => 'LOG-M185-001',
+            'brand' => 'Samsung',
+            'model' => 'Galaxy S24 Ultra',
+            'name' => 'Galaxy S24 Ultra 512GB',
+            'description' => '6.8" Dynamic AMOLED 2X, S Pen included, 200MP camera, titanium armor frame',
+            'price' => 74990.00,
+            'sku' => 'SAM-GS24U-512',
             'supplier_id' => $techSource->id
         ]);
 
         Product::create([
-            'name' => 'Redragon K552 Mechanical Keyboard',
-            'description' => 'RGB backlit mechanical gaming keyboard with blue switches, durable aluminum frame',
-            'price' => 1599.00,
-            'sku' => 'RED-K552-001',
+            'brand' => 'Xiaomi',
+            'model' => 'Redmi Note 13 Pro',
+            'name' => 'Redmi Note 13 Pro 256GB',
+            'description' => '6.67" AMOLED 120Hz display, 200MP main camera, 67W fast charging, MediaTek Dimensity 7200',
+            'price' => 18990.00,
+            'sku' => 'XIA-RN13P-256',
             'supplier_id' => $megaHardware->id
         ]);
 
         Product::create([
-            'name' => 'UGREEN USB-C Hub 7-in-1',
-            'description' => 'Multi-port adapter with HDMI 4K, USB 3.0, SD/TF card reader, PD charging',
-            'price' => 1299.00,
-            'sku' => 'UGR-7IN1-001',
+            'brand' => 'OnePlus',
+            'model' => '12',
+            'name' => 'OnePlus 12 256GB',
+            'description' => '6.82" LTPO 3 AMOLED, Snapdragon 8 Gen 3, 100W SuperVOOC charging, Hasselblad camera',
+            'price' => 45990.00,
+            'sku' => 'ONE-OP12-256',
             'supplier_id' => $megaHardware->id
         ]);
 
         Product::create([
-            'name' => 'Samsung 27" Monitor LS27R350',
-            'description' => '27" FHD IPS monitor with 75Hz refresh rate, AMD FreeSync, eye care features',
-            'price' => 8999.00,
-            'sku' => 'SAM-27FHD-001',
+            'brand' => 'Google',
+            'model' => 'Pixel 8 Pro',
+            'name' => 'Pixel 8 Pro 256GB',
+            'description' => '6.7" LTPO OLED, Google Tensor G3, 50MP main camera, 7 years of updates',
+            'price' => 52990.00,
+            'sku' => 'GOO-PX8P-256',
             'supplier_id' => $electroWorld->id
         ]);
 
         Product::create([
-            'name' => 'Razer Kiyo Pro Webcam',
-            'description' => '1080p 60FPS webcam with adaptive light sensor, built-in ring light, noise-canceling mic',
-            'price' => 4599.00,
-            'sku' => 'RZ-KIYO-001',
+            'brand' => 'Oppo',
+            'model' => 'Find X7 Ultra',
+            'name' => 'Find X7 Ultra 512GB',
+            'description' => '6.82" AMOLED 120Hz, Snapdragon 8 Gen 3, Hasselblad camera system, 100W charging',
+            'price' => 48990.00,
+            'sku' => 'OPPO-FX7U-512',
             'supplier_id' => $electroWorld->id
         ]);
     }
